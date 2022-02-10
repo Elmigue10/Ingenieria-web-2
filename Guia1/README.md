@@ -24,11 +24,17 @@ ALTER TABLE user ADD UNIQUE document(document);
 VOLCADO DE DATOS TABLA USER:
 
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Miguel","Valbuena","10002345", "Calle 22a #3", 312323212, "miguel@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Angela","Gomez","11923123", "Calle 12a #6", 321424312, "angela@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Diego","Rodriguez","1214645", "Calle 26a #34", 312536331, "diego@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Isabella","Valbuena","124435", "Calle 122a #33", 316325312, "isabella@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Thomas","Perez","412234123", "Calle 32a #37", 311525145, "thomas@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Sara","Caicedo","10234525", "Calle 152a #11", 312452353, "sara@email.com");
+
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Juan","Suarez","12344134", "Calle 127a #14", 312546421, "juan@email.com");
 
 select * from user;
@@ -36,5 +42,7 @@ select * from user;
 PASOS PARA EJECUTAR EL PROYECTO:
 
 npm init -y -> Para iniciar nuestro proyecto con node
+
 npm install mysql2 -> Para conectarnos a la base de datos. ¿Por que usar mysql2 y no mysql? https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
+
 npm consulta.js -> Para ejecutar el proyecto
