@@ -4,6 +4,7 @@ REQUERIMIENTOS:
  -nodeJs
 
 COMANDOS PARA MONTAR LA BASE DE DATOS MYSQL EN DOCKER:
+
 docker pull mysql
 docker run -d -p 3306:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=secret mysql --lower_case_table_names=1
 
