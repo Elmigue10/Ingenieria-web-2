@@ -1,15 +1,15 @@
-Requerimiento:
+REQUERIMIENTOS:
  -Docker
  -nodeJs
 
-Comandos para montar la base de datos mysql en docker:
+COMANDOS PARA MONTAR LA BASE DE DATOS MYSQL EN DOCKER:
 docker pull mysql
 docker run -d -p 3306:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=secret mysql --lower_case_table_names=1
 
 docker exec -it mysql-db mysql -p
 password: secret
 
-Creación de la base de datos con la tabla user:
+CREACIÓN DE LA BASE DE DATOS CON LA TABLA USER:
 
 create database gestion;
 
@@ -19,7 +19,7 @@ create table user(id mediumint not null AUTO_INCREMENT, firstName VARCHAR(32) NO
 
 ALTER TABLE user ADD UNIQUE document(document);
 
-Inserción de registros a la tabla user:
+VOLCADO DE DATOS TABLA USER:
 
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Miguel","Valbuena","10002345", "Calle 22a #3", 312323212, "miguel@email.com");
 INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES ("Angela","Gomez","11923123", "Calle 12a #6", 321424312, "angela@email.com");
@@ -31,7 +31,8 @@ INSERT INTO user (firstName, lastName, document, address, phone, email) VALUES (
 
 select * from user;
 
-Pasos para ejectuar el proyecto:
+PASOS PARA EJECUTAR EL PROYECTO:
+
 npm init -y -> Para iniciar nuestro proyecto con node
 npm install mysql2 -> Para conectarnos a la base de datos. ¿Por que usar mysql2 y no mysql? https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
 npm consulta.js -> Para ejecutar el proyecto
