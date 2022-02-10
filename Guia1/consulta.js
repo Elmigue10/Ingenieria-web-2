@@ -18,3 +18,5 @@ conexion.query("SELECT * FROM user", (err, rows)=>{
     console.log("Consulta la información de la tabla")
     console.log(rows)
 })
+
+conexion.end()
