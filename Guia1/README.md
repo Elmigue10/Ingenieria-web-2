@@ -1,4 +1,5 @@
 REQUERIMIENTOS:
+
  -Docker
  -nodeJs
 
