@@ -11,6 +11,7 @@ docker pull mysql
 docker run -d -p 3306:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=secret mysql --lower_case_table_names=1
 
 docker exec -it mysql-db mysql -p
+
 password: secret
 
 CREACIÓN DE LA BASE DE DATOS CON LA TABLA USER:
