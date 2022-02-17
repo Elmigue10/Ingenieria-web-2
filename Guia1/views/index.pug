@@ -1,0 +1,23 @@
+html
+  head
+    title Guia 1 - Ingenieria web 2 
+  body
+    h1(style="text-align:center;") Personas
+    table(style='width:100%', border='1')
+        tr 
+            th Id
+            th FirstName
+            th LastName 
+            th Document
+            th Address 
+            th Phone 
+            th Email    
+        each persona, i in personas
+            tr
+                td= persona.id
+                td= persona.firstName
+                td= persona.lastName
+                td= persona.document
+                td= persona.address
+                td= persona.phone
+                td= persona.email

@@ -49,3 +49,17 @@ npm init -y -> Para iniciar nuestro proyecto con node
 npm install mysql2 -> Para conectarnos a la base de datos. ¿Por que usar mysql2 y no mysql? https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
 
 npm consulta.js -> Para ejecutar el proyecto
+
+INSTALACIÓN DE EXPRESS PARA CREAR UN SERVIDOR:
+
+npm install express -> Para instalar el modulo express
+
+INSTALACIÓN DE UN MOTOR DE PLANTILLAS PARA HACER RENDERS DINAMICOS:
+
+npm install pug -> Para instalar el motor de plantillas pug
+
+POR ULTIMO:
+
+node consulta.js -> Para ejecutar nuestro servidor
+
+Visitar http://localhost:3000
