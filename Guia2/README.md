@@ -26,3 +26,13 @@ CREATE TABLE IF NOT EXISTS cliente(
     nombre VARCHAR(255) NOT NULL,
     activo BOOLEAN DEFAULT FALSE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+PASOS PARA EJECUTAR EL PROYECTO:
+
+npm init -y -> Para iniciar nuestro proyecto con node
+
+npm install express mysql2 body-parser --save -> Para instalar las librerias express, mysql2 y body-parser
+
+node server.js
+
+IMPORTAR LA COLECCIÓN DE POSTMAN Y PROBAR LOS SERVICIOS :).
