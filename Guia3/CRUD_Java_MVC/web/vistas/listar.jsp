@@ -15,6 +15,8 @@
         <div class="container">
             <h1>Personas</h1>
             <br>
+            <a class="btn btn-success" href="Controlador?accion=add">Agregar Nuevo</a>
+            <br>
             <table class="blue">
                 <thead>
                     <tr>
@@ -38,9 +40,9 @@
                         <td><%= per.getId()%></td>
                         <td><%= per.getDni()%></td>
                         <td><%= per.getNom()%></td>
-                        <td >
-                            <a>Editar</a>
-                            <a>Eliminar</a>
+                        <td>
+                            <a href="Controlador?accion=editar&id=<%= per.getId()%>">Editar</a>
+                            <a href="Controlador?accion=eliminar&id=<%= per.getId()%>">Eliminar</a>
                         </td>
                     </tr>
                     <%}%>

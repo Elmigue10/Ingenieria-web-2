@@ -4,6 +4,8 @@
  */
 package Controlador;
 
+import Modelo.Persona;
+import ModeloDAO.PersonaDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -23,6 +25,9 @@ public class Controlador extends HttpServlet {
     String listar="vistas/listar.jsp";
     String add="vistas/add.jsp";
     String edit="vistas/edit.jsp";
+    Persona p=new Persona();
+    PersonaDAO dao=new PersonaDAO();
+    int id;
     
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -66,6 +71,36 @@ public class Controlador extends HttpServlet {
         String action=request.getParameter("accion");
         if(action.equalsIgnoreCase("listar")){
             acceso=listar;            
+        }else if(action.equalsIgnoreCase("add")){
+            acceso=add;
+        }
+        else if(action.equalsIgnoreCase("Agregar")){
+            String dni=request.getParameter("txtDni");
+            String nom=request.getParameter("txtNom");
+            p.setDni(dni);
+            p.setNom(nom);
+            dao.add(p);
+            acceso=listar;
+        }
+        else if(action.equalsIgnoreCase("editar")){
+            request.setAttribute("idper",request.getParameter("id"));
+            acceso=edit;
+        }
+        else if(action.equalsIgnoreCase("Actualizar")){
+            id=Integer.parseInt(request.getParameter("txtid"));
+            String dni=request.getParameter("txtDni");
+            String nom=request.getParameter("txtNom");
+            p.setId(id);
+            p.setDni(dni);
+            p.setNom(nom);
+            dao.edit(p);
+            acceso=listar;
+        }
+        else if(action.equalsIgnoreCase("eliminar")){
+            id=Integer.parseInt(request.getParameter("id"));
+            p.setId(id);
+            dao.eliminar(id);
+            acceso=listar;
         }
         RequestDispatcher vista=request.getRequestDispatcher(acceso);
         vista.forward(request, response);
