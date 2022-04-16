@@ -1,9 +1,8 @@
 REQUSITOS: 
 
 - Servidor de Glassfish instalado 4.0.
-- Derby en Net Beans.
 
-- MySQL.
+- Derby en Net Beans.
 
 CREACIÓN DE LA BASE DE DATOS:
 
