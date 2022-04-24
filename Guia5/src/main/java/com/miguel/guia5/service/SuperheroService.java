@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 @Service
@@ -57,6 +58,9 @@ public class SuperheroService {
                     porcentajeVotosStr
             ));
         }
+
+        superheroDTOS.sort(Comparator.comparing(SuperheroDTO::getVotos).reversed());
+
         return superheroDTOS;
     }
 
