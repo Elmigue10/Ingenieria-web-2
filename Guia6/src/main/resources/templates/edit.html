@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Editar producto</h1>
+<div class="form-producto">
+    <form th:action="@{/edit}" th:object="${producto}" th:method="PUT" method="PUT">
+        <label for="input-id">Id</label>
+        <input type="text" id="input-id" th:field="*{id}" name="input-id" th:value="${producto.id}" readonly="readonly">
+        <br>
+        <label for="input-nombre">Nombre</label>
+        <input type="text" id="input-nombre" th:field="*{nombre}" name="input-nombre" th:value="${producto.nombre}">
+        <br>
+        <label for="input-precio">Precio</label>
+        <input type="text" id="input-precio" th:field="*{precio}" name="input-precio" th:value="${producto.precio}">
+        <br>
+        <label for="input-precio">Descripción</label>
+        <input type="text" id="input-descripcion" th:field="*{descripcion}" name="input-descripcion" th:value="${producto.descripcion}">
+        <br>
+        <label for="input-precio">Imagen</label>
+        <input type="text" id="input-imagen" th:field="*{imagen}" name="input-imagen" th:value="${producto.imagen}">
+        <br>
+        <button type="submit" id="button-edit">Editar</button>
+    </form>
+</div>
+</body>
+</html>

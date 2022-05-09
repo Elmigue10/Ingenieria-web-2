@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Productos</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Productos</h1>
+    <div class="form-producto">
+        <form th:action="@{/save}" th:object="${producto}" method="post">
+            <label for="input-nombre">Nombre</label>
+            <input type="text" id="input-nombre" th:field="*{nombre}" name="input-nombre">
+            <br>
+            <label for="input-precio">Precio</label>
+            <input type="text" id="input-precio" th:field="*{precio}" name="input-precio">
+            <br>
+            <label for="input-precio">Descripción</label>
+            <input type="text" id="input-descripcion" th:field="*{descripcion}" name="input-descripcion">
+            <br>
+            <label for="input-precio">Imagen</label>
+            <input type="text" id="input-imagen" th:field="*{imagen}" name="input-imagen">
+            <br>
+            <div class="button-container">
+            <button type="submit" id="button-save">Guargar</button>
+            </div>
+        </form>
+    </div>
+<!--        <p th:text="${productos}"></p>-->
+    <div>
+        <table class="blue">
+            <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripcion</th>
+            <th>Imagen</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+            </thead>
+            <tbody>
+            <tr th:each="producto : ${productos}">
+                <td th:text="${producto.id}"></td>
+                <td th:text="${producto.nombre}"></td>
+                <td th:text="${producto.precio}"></td>
+                <td th:text="${producto.descripcion}"></td>
+                <td><img th:src="${producto.imagen}"></td>
+                <td><a th:href="@{/producto/{id}(id=${producto.id})}">Editar</a></td>
+                <td><a th:href="@{/delete/{id}(id=${producto.id})}">Eliminar</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
