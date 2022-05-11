@@ -2,17 +2,16 @@ package dev.miguel.guia6.service;
 
 import dev.miguel.guia6.model.Producto;
 import dev.miguel.guia6.repository.ProductoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class ProductoService {
 
-    @Autowired
-    ProductoRepository productoRepository;
+    private ProductoRepository productoRepository;
 
     public List<Producto> listProducts(){ return productoRepository.findAll(); }
 

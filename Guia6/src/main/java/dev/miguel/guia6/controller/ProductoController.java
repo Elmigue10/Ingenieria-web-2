@@ -2,18 +2,17 @@ package dev.miguel.guia6.controller;
 
 import dev.miguel.guia6.model.Producto;
 import dev.miguel.guia6.service.ProductoService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @Controller
+@AllArgsConstructor
 public class ProductoController {
 
-    @Autowired
-    ProductoService productoService;
+
+    private ProductoService productoService;
 
     @GetMapping("/productos")
     public String list(Model model){
