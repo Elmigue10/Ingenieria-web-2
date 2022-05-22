@@ -1,0 +1,28 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Save person</h3>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="formGroup" (ngSubmit)="save()">
+
+                <div class="form-group">
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" formControlName="nombres" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" formControlName="apellidos" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="programa">Programa:</label>
+                    <input type="text" formControlName="programa" class="form-control">
+                </div>
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+</div>
