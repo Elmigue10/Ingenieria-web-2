@@ -20,6 +20,7 @@ export class EditComponent implements OnInit {
     private service: PersonaService) { 
 
       this.formGroup = this.form.group({
+        id:[''],
         nombres:[''],
         apellidos:[''],
         programa:['']
